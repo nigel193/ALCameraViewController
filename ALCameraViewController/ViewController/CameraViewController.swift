@@ -96,7 +96,7 @@ open class CameraViewController: UIViewController {
         return cameraOverlay
     }()
     
-    let cameraButton : UIButton = {
+   public let cameraButton : UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
         button.translatesAutoresizingMaskIntoConstraints = false
         button.isEnabled = false
@@ -111,7 +111,7 @@ open class CameraViewController: UIViewController {
         return button
     }()
     
-    let closeButton : UIButton = {
+    public let closeButton : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "closeButton",
@@ -141,7 +141,7 @@ open class CameraViewController: UIViewController {
         return button
     }()
     
-    let flashButton : UIButton = {
+   public let flashButton : UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "flashAutoIcon",
@@ -497,7 +497,7 @@ open class CameraViewController: UIViewController {
      * taken, then, realease the buttons and save
      * the picture on the device.
      */
-    internal func capturePhoto() {
+    public func capturePhoto() {
         guard let output = cameraView.imageOutput,
             let connection = output.connection(with: AVMediaType.video) else {
             return
